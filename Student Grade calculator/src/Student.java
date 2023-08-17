@@ -1,16 +1,14 @@
-
 import java.util.Scanner;
-
 public class Student 
 {
-    int Subjects;
-    float marks[];
+    int Subjects; //Stores the Number of Subject
+    float marks[]; //Stores the marks of all subjects
     float total=0;
     float percentage;
     Student(int n)
     {
         Subjects=n;
-       marks=new float[n];
+       marks=new float[n]; //Size of array is define by user
     }
     void accept()
     {
@@ -18,7 +16,7 @@ public class Student
         for(int i=0;i<Subjects;i++)
         {
             System.out.print("Enter the Marks of "+(i+1)+" Subject(Out of 100):");
-            marks[i]=S.nextFloat();
+            marks[i]=S.nextFloat(); //Reads the Float values and stores in Marks array
             total=total+marks[i];
         }
         S.close();
@@ -29,7 +27,7 @@ public class Student
     }
     void display()
     {
-        cal_percentage();
+        cal_percentage(); //cal_percentage() method is called inside display method
         System.out.println("Total Marks are "+total);
         System.out.println("Average Percentage are "+percentage);
         if(percentage>=90)
