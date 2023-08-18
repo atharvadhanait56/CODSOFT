@@ -61,7 +61,7 @@ public class Student
         Scanner Sc=new Scanner(System.in);
         System.out.print("Enter the Number of Subject:");
         int n=Sc.nextInt();
-        Student S=new Student(n);
+        Student S=new Student(n); //instance of Student class
         S.accept();
         S.display();
         Sc.close();
