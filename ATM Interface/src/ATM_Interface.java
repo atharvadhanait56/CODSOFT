@@ -1,13 +1,14 @@
 import java.util.Scanner;
-class Bank_account
+class Bank_account  //Base class 
 {   
     protected double balance;
 }
 
-class ATM extends Bank_account
+class ATM extends Bank_account      //sub class derived from base class
 {
     Scanner S=new Scanner(System.in);
-    void  withdraw(double amount)
+
+    void  withdraw(double amount) // Method to withdraw money from the account
     {
         if(amount<balance && amount>0)
         {
@@ -19,7 +20,7 @@ class ATM extends Bank_account
         }
     }
     
-    void deposit(double amount)
+    void deposit(double amount) // Method to deposit money into the account
     {
         if(amount>0)
         {
@@ -32,12 +33,12 @@ class ATM extends Bank_account
         }
     }
 
-    void checkBalance()
+    void checkBalance()  // Method to check and display the account balance
     {
         System.out.println("Your Balance is "+balance);
     }
 
-    void run()
+    void run()  // Method to run the ATM interface
     {
         int choice;
         do
@@ -65,10 +66,10 @@ class ATM extends Bank_account
                 break;
 
                 case 4:
-                System.exit(1);
+                System.exit(1);  // Exit the program
             }
         }
-        while(choice!=4);
+        while(choice!=4); // Repeat until the user chooses to exit
     }
 }
 
@@ -76,7 +77,7 @@ public class ATM_Interface
 {
     public static void main(String[] args) 
     {
-        ATM atm=new ATM();
-        atm.run();
+        ATM atm=new ATM();  // Create an instance of the ATM class
+        atm.run(); 
     }
 }
