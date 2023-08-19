@@ -67,6 +67,9 @@ class ATM extends Bank_account      //sub class derived from base class
 
                 case 4:
                 System.exit(1);  // Exit the program
+
+                default:
+                System.out.println("Wrong Choice!!!!!!!");
             }
         }
         while(choice!=4); // Repeat until the user chooses to exit
